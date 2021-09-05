@@ -19,13 +19,13 @@ def home(request):
     return HttpResponse('This is home page')
 
 def about(request):
-    return HttpResponse('This is about page')
+    return render(request,'About.html')
 
 def Services(request):
-    return HttpResponse('This is Services page')
+    return render(request,'Services.html')
 
 def contact(request):
-    return HttpResponse('This is Contact page')   
+    return render(request,'Contact.html')
 
 def address(request):
     return HttpResponse('This is Contact page')     
