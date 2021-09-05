@@ -12,4 +12,7 @@ def Services(request):
 
 def contact(request):
     return HttpResponse('This is Contact page')   
+
+def address(request):
+    return HttpResponse('This is Contact page')     
     
