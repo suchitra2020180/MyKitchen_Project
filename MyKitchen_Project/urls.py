@@ -16,9 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
+#added admin from google  ##Django admin text
+admin.site.site_header = "My_Kitchen Admin"
+admin.site.site_title = "My_Kitchen Admin Portal"
+admin.site.index_title = "Welcome to My_Kitchen Portal"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('Mykitchen_App.urls')),
+    path('index',include('Mykitchen_App.urls')),
+    path('sendvariabletoTemplate',include('Mykitchen_App.urls')),
     path('about',include('Mykitchen_App.urls')),
     path('Services',include('Mykitchen_App.urls')),
     path('contact',include('Mykitchen_App.urls'))

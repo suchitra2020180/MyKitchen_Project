@@ -4,6 +4,8 @@ from Mykitchen_App import views
 
 urlpatterns = [
     path('',views.home,name='home'),
+    path('index',views.index,name='index'),
+    path('sendvariabletoTemplate',views.SendVariableToTemplate,name='sendvariabletoTemplate'),
     path('about',views.about,name='About'),
     path('Services',views.Services,name='Services'),
     path('contact',views.contact,name='contact')
