@@ -11,6 +11,9 @@ def SendVariableToTemplate(request):
 
     }
     return render(request,'SendVariableToTemplate.html',context)
+
+def My_Kitchen_page(request):
+    return render(request,'My_Kitchen_page.html')
     
 def home(request):
     return HttpResponse('This is home page')

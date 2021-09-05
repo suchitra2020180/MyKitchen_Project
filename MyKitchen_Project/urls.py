@@ -26,6 +26,7 @@ urlpatterns = [
     path('',include('Mykitchen_App.urls')),
     path('index',include('Mykitchen_App.urls')),
     path('sendvariabletoTemplate',include('Mykitchen_App.urls')),
+    path('My_Kitchen_page',include('Mykitchen_App.urls')),
     path('about',include('Mykitchen_App.urls')),
     path('Services',include('Mykitchen_App.urls')),
     path('contact',include('Mykitchen_App.urls'))
