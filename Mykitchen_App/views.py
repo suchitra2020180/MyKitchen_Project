@@ -1,4 +1,8 @@
 from django.shortcuts import render,HttpResponse
+from datetime import datetime
+from Mykitchen_App.models import Contact
+from django.contrib import messages
+
 
 # Create your views here.
 def index(request):
@@ -25,6 +29,15 @@ def Services(request):
     return render(request,'Services.html')
 
 def contact(request):
+    if request.method =="POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        mobile = request.POST.get('mobile')
+        desc = request.POST.get('desc')
+        contact=Contact(name=name,email=email, mobile=mobile,desc=desc,date=datetime.today())
+        contact.save()
+        messages.success(request, 'Message sent successully!') 
+
     return render(request,'Contact.html')
 
 def address(request):
